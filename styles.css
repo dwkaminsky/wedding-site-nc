@@ -76,6 +76,8 @@ nav a[aria-selected="true"]:not(.nav-rsvp) { box-shadow: 0 2px 0 var(--gold); }
 .weekend { background: var(--cream); }
 .section-heading { max-width: 50rem; margin: 0 auto 5rem; text-align: center; }
 .section-heading > p:last-child { color: #5f685f; }
+.schedule-address { margin: -.5rem 0 .25rem; color: #5f685f; font-size: .9rem; }
+.schedule-attire { margin-bottom: 0; color: var(--terracotta) !important; font-size: .75rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; }
 .timeline { max-width: 66rem; margin: auto; }
 .event { display: grid; grid-template-columns: 11rem 1fr; gap: 3rem; padding: 2rem 0; border-top: 1px solid var(--line); }
 .event:last-child { border-bottom: 1px solid var(--line); }
