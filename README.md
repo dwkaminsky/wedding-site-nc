@@ -1,16 +1,10 @@
-# Emma & James — Wedding Website
+# Danny & Caitlin — Wedding Reception Website
 
 A responsive, single-page wedding website built with plain HTML, CSS, and JavaScript for GitHub Pages.
 
 ## Customize
 
-Search and replace the sample details in `index.html`:
-
-- `Emma` and `James`
-- `October 10, 2026`
-- Asheville venues, hotel links, and schedule
-- `hello@example.com`
-- Registry `href="#"` placeholders
+Event details, schedule, travel suggestions, menu, attire guidance, and RSVP information are maintained directly in `index.html`.
 
 ## Publish with GitHub Pages
 
