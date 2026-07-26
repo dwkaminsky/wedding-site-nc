@@ -135,7 +135,8 @@ details p { max-width: 45rem; padding: 0 3rem 1.5rem 0; }
 .registry { background: var(--cream); text-align: center; }
 .registry > p:not(.eyebrow) { max-width: 35rem; margin: 0 auto 2.5rem; color: #657068; }
 .registry-links { display: flex; justify-content: center; gap: 1rem; }
-.registry-links a { min-width: 13rem; padding: 1rem; border: 1px solid var(--ink); font-size: .72rem; font-weight: 600; letter-spacing: .12em; text-decoration: none; text-transform: uppercase; }
+.registry-links a { display: flex; min-width: 17rem; align-items: center; justify-content: space-between; padding: 1rem; border: 1px solid var(--ink); font-size: .72rem; font-weight: 600; letter-spacing: .1em; text-decoration: none; text-transform: uppercase; transition: background .2s, color .2s; }
+.registry-links a:hover { background: var(--forest); color: var(--cream); }
 .registry-links span { margin-left: 2rem; color: var(--terracotta); }
 
 .rsvp { display: grid; min-height: 43rem; grid-template-columns: 1fr 1fr; background: var(--forest); color: var(--cream); }
