@@ -95,6 +95,9 @@ nav a[aria-selected="true"]:not(.nav-rsvp) { box-shadow: 0 2px 0 var(--gold); }
 .menu-intro { position: sticky; top: 5.25rem; align-self: start; }
 .menu-intro .eyebrow { color: #f0c58c; }
 .menu-intro > p:last-child { max-width: 30rem; color: #efd9cd; }
+.bar-note { max-width: 30rem; margin-top: 2rem; padding: 1.25rem 0 0 1.25rem; border-top: 1px solid rgba(255,255,255,.3); border-left: 2px solid #f0c58c; }
+.bar-note .course { margin-bottom: .35rem; color: #f0c58c; }
+.bar-note > p:last-child { margin: 0; color: #f5e3d9; font-size: .9rem; }
 .menu-card { padding: clamp(2rem, 5vw, 4rem); background: var(--paper); color: var(--ink); box-shadow: 0 25px 80px rgba(85,35,23,.2); }
 .menu-card > div { padding: 1.4rem 0; border-bottom: 1px solid var(--line); }
 .menu-card > div:last-child { border: 0; }
