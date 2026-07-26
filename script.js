@@ -37,7 +37,7 @@ function activateTab(id, updateHistory = false) {
 
   window.scrollTo({ top: 0, behavior: "auto" });
   document.title = panel.id === "home"
-    ? "Danny & Caitlin — 05.29.2027"
+    ? "Danny & Caitlin — 05.22.2027"
     : `${panel.id === "weekend" ? "Schedule" : panel.id[0].toUpperCase() + panel.id.slice(1)} — Danny & Caitlin`;
 }
 
