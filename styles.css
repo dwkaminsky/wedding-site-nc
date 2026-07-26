@@ -27,7 +27,7 @@ h3 { font-family: var(--serif); font-size: 1.8rem; font-weight: 400; line-height
 .button-dark:hover { background: var(--cream); color: var(--forest); }
 .text-link { display: inline-block; border-bottom: 1px solid currentColor; font-size: .8rem; font-weight: 600; letter-spacing: .08em; text-decoration: none; text-transform: uppercase; }
 
-.site-header { position: fixed; z-index: 10; top: 0; display: flex; width: 100%; align-items: center; justify-content: space-between; padding: 1rem 4vw; background: rgba(24, 40, 33, .96); color: var(--cream); box-shadow: 0 1px 0 rgba(255,255,255,.1); backdrop-filter: blur(12px); }
+.site-header { position: fixed; z-index: 10; top: 0; display: flex; width: 100%; min-height: 3.75rem; align-items: center; justify-content: space-between; padding: .65rem 4vw; background: rgba(24, 40, 33, .96); color: var(--cream); box-shadow: 0 1px 0 rgba(255,255,255,.1); backdrop-filter: blur(12px); }
 .monogram { font-family: var(--serif); font-size: 1.6rem; letter-spacing: -.1em; text-decoration: none; }
 .monogram span { margin: 0 .18em; color: var(--gold); font-size: .7em; }
 nav { display: flex; align-items: center; gap: clamp(1rem, 2.5vw, 2.5rem); }
@@ -38,7 +38,10 @@ nav a[aria-selected="true"]:not(.nav-rsvp) { box-shadow: 0 2px 0 var(--gold); }
 .nav-rsvp[aria-selected="true"] { background: var(--cream); color: var(--forest); }
 .menu-toggle { display: none; border: 0; background: transparent; color: inherit; }
 .tab-panel[hidden] { display: none !important; }
-.tab-panel:not(.hero) { min-height: 100svh; padding-top: clamp(7.5rem, 11vw, 10rem); }
+.tab-panel:not(.hero) { min-height: 100svh; padding-top: 5.25rem; padding-bottom: 3.5rem; }
+.tab-panel:not(.hero) h2 { margin-bottom: .75rem; font-size: clamp(2.7rem, 5vw, 4.5rem); }
+.tab-panel .section-heading { margin-bottom: 2rem; }
+.tab-panel .section-heading .eyebrow { margin-bottom: .5rem; }
 
 .hero { position: relative; min-height: 100svh; overflow: hidden; background: var(--forest); color: var(--cream); }
 .hero-copy { position: relative; z-index: 3; display: flex; min-height: 100svh; flex-direction: column; align-items: center; justify-content: center; padding: 7rem 1.5rem; text-align: center; }
@@ -73,7 +76,7 @@ nav a[aria-selected="true"]:not(.nav-rsvp) { box-shadow: 0 2px 0 var(--gold); }
 .section-heading { max-width: 50rem; margin: 0 auto 5rem; text-align: center; }
 .section-heading > p:last-child { color: #5f685f; }
 .timeline { max-width: 66rem; margin: auto; }
-.event { display: grid; grid-template-columns: 11rem 1fr; gap: 3rem; padding: 3rem 0; border-top: 1px solid var(--line); }
+.event { display: grid; grid-template-columns: 11rem 1fr; gap: 3rem; padding: 2rem 0; border-top: 1px solid var(--line); }
 .event:last-child { border-bottom: 1px solid var(--line); }
 .event-day { display: flex; flex-direction: column; align-items: center; }
 .event-day span, .event-day small { font-size: .67rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; }
@@ -84,11 +87,11 @@ nav a[aria-selected="true"]:not(.nav-rsvp) { box-shadow: 0 2px 0 var(--gold); }
 .event-details > p:not(.event-time,.venue,.attire) { max-width: 31rem; color: #59645d; }
 .venue { margin: .7rem 0; font-weight: 600; line-height: 1.5; }
 .attire { font-size: .8rem; font-style: italic; }
-.event.featured { margin: 0 -2rem; padding: 3rem 2rem; background: var(--forest); color: var(--cream); border: 0; }
+.event.featured { margin: 0 -2rem; padding: 2rem; background: var(--forest); color: var(--cream); border: 0; }
 .event.featured .event-details > p:not(.event-time,.venue,.attire) { color: #c9d0c7; }
 
 .menu-section { display: grid; grid-template-columns: 1fr 1fr; gap: 10vw; background: var(--terracotta); color: var(--cream); }
-.menu-intro { position: sticky; top: 4rem; align-self: start; }
+.menu-intro { position: sticky; top: 5.25rem; align-self: start; }
 .menu-intro .eyebrow { color: #f0c58c; }
 .menu-intro > p:last-child { max-width: 30rem; color: #efd9cd; }
 .menu-card { padding: clamp(2rem, 5vw, 4rem); background: var(--paper); color: var(--ink); box-shadow: 0 25px 80px rgba(85,35,23,.2); }
@@ -108,7 +111,7 @@ nav a[aria-selected="true"]:not(.nav-rsvp) { box-shadow: 0 2px 0 var(--gold); }
 .hotel dl { display: grid; grid-template-columns: 1fr 1fr; margin: 1.8rem 0; font-size: .76rem; }
 .hotel dt { color: #7d837e; }
 .hotel dd { margin: 0; text-align: right; }
-.travel-notes { display: grid; grid-template-columns: 1fr 1fr; gap: 8vw; margin-top: 5rem; }
+.travel-notes { display: grid; grid-template-columns: 1fr 1fr; gap: 8vw; margin-top: 3rem; }
 .travel-notes > div { position: relative; padding-left: 3rem; }
 .travel-notes span { position: absolute; left: 0; color: var(--gold); }
 .travel-notes h3 { margin-bottom: .7rem; }
@@ -132,6 +135,7 @@ details p { max-width: 45rem; padding: 0 3rem 1.5rem 0; }
 
 .rsvp { display: grid; min-height: 43rem; grid-template-columns: 1fr 1fr; background: var(--forest); color: var(--cream); }
 .rsvp-copy { display: flex; flex-direction: column; align-items: flex-start; justify-content: center; padding: clamp(4rem, 9vw, 9rem); }
+.tab-panel.rsvp .rsvp-copy { justify-content: flex-start; padding: 5.5rem 7vw 3rem; }
 .rsvp-copy .eyebrow { color: #e5b777; }
 .rsvp-copy > p:not(.eyebrow) { max-width: 28rem; color: #c9d0c7; }
 .rsvp-copy small { margin-top: 1.5rem; color: #b9c2b8; }
@@ -163,14 +167,17 @@ footer p { margin: 0; }
   .diamond { display: none; }
   .scroll-cue { display: none; }
   .section { padding: 5.5rem 6vw; }
+  .tab-panel:not(.hero) { padding: 4.75rem 6vw 2.5rem; }
+  .tab-panel:not(.hero) h2 { font-size: clamp(2.5rem, 11vw, 3.5rem); }
+  .tab-panel .section-heading { margin-bottom: 1.5rem; text-align: left; }
   .intro, .menu-section, .rsvp { grid-template-columns: 1fr; }
   .intro { gap: 4rem; }
   .memory-scene { min-height: 26rem; }
-  .event { grid-template-columns: 5rem 1fr; gap: 1.2rem; }
+  .event { grid-template-columns: 5rem 1fr; gap: 1.2rem; padding: 1.5rem 0; }
   .event-day strong { font-size: 3.6rem; }
   .event-details { display: block; }
   .event-time { margin-bottom: .5rem; }
-  .event.featured { margin: 0 -3vw; padding: 2.5rem 3vw; }
+  .event.featured { margin: 0 -3vw; padding: 1.5rem 3vw; }
   .menu-intro { position: static; }
   .hotel-grid { grid-template-columns: 1fr; }
   .hotel { border-right: 0; border-bottom: 1px solid var(--line); }
@@ -178,6 +185,7 @@ footer p { margin: 0; }
   .travel-notes { grid-template-columns: 1fr; gap: 2rem; }
   .registry-links { flex-direction: column; align-items: center; }
   .rsvp { min-height: auto; }
+  .tab-panel.rsvp .rsvp-copy { padding: 5rem 6vw 3rem; }
   .rsvp-art { min-height: 28rem; grid-row: 1; }
   footer { flex-direction: column; gap: 1rem; text-align: center; }
 }
