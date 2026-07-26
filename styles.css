@@ -27,13 +27,18 @@ h3 { font-family: var(--serif); font-size: 1.8rem; font-weight: 400; line-height
 .button-dark:hover { background: var(--cream); color: var(--forest); }
 .text-link { display: inline-block; border-bottom: 1px solid currentColor; font-size: .8rem; font-weight: 600; letter-spacing: .08em; text-decoration: none; text-transform: uppercase; }
 
-.site-header { position: absolute; z-index: 10; top: 0; display: flex; width: 100%; align-items: center; justify-content: space-between; padding: 1.5rem 4vw; color: var(--cream); }
+.site-header { position: fixed; z-index: 10; top: 0; display: flex; width: 100%; align-items: center; justify-content: space-between; padding: 1rem 4vw; background: rgba(24, 40, 33, .96); color: var(--cream); box-shadow: 0 1px 0 rgba(255,255,255,.1); backdrop-filter: blur(12px); }
 .monogram { font-family: var(--serif); font-size: 1.6rem; letter-spacing: -.1em; text-decoration: none; }
 .monogram span { margin: 0 .18em; color: var(--gold); font-size: .7em; }
 nav { display: flex; align-items: center; gap: clamp(1rem, 2.5vw, 2.5rem); }
 nav a { font-size: .68rem; font-weight: 600; letter-spacing: .14em; text-decoration: none; text-transform: uppercase; }
+nav a[aria-selected="true"] { color: #efc486; }
+nav a[aria-selected="true"]:not(.nav-rsvp) { box-shadow: 0 2px 0 var(--gold); }
 .nav-rsvp { padding: .55rem 1rem; border: 1px solid rgba(255,255,255,.55); }
+.nav-rsvp[aria-selected="true"] { background: var(--cream); color: var(--forest); }
 .menu-toggle { display: none; border: 0; background: transparent; color: inherit; }
+.tab-panel[hidden] { display: none !important; }
+.tab-panel:not(.hero) { min-height: 100svh; padding-top: clamp(7.5rem, 11vw, 10rem); }
 
 .hero { position: relative; min-height: 100svh; overflow: hidden; background: var(--forest); color: var(--cream); }
 .hero-copy { position: relative; z-index: 3; display: flex; min-height: 100svh; flex-direction: column; align-items: center; justify-content: center; padding: 7rem 1.5rem; text-align: center; }
@@ -146,12 +151,13 @@ footer p { margin: 0; }
 
 @media (max-width: 800px) {
   h2 { font-size: clamp(2.8rem, 14vw, 4.5rem); }
-  .site-header { position: absolute; }
+  .site-header { position: fixed; }
   .menu-toggle { z-index: 12; display: block; width: 2rem; height: 2rem; padding: .3rem; }
   .menu-toggle span:not(.sr-only) { display: block; width: 100%; height: 1px; margin: 5px 0; background: currentColor; transition: .2s; }
   nav { position: fixed; inset: 0; z-index: 11; display: none; flex-direction: column; justify-content: center; background: var(--forest); }
   nav.open { display: flex; }
   nav a { font-family: var(--serif); font-size: 1.8rem; font-weight: 400; letter-spacing: 0; text-transform: none; }
+  nav a[aria-selected="true"]:not(.nav-rsvp) { box-shadow: none; color: #efc486; }
   .hero h1 { font-size: clamp(4.3rem, 23vw, 7rem); line-height: .85; }
   .hero-meta { flex-direction: column; gap: .2rem; }
   .diamond { display: none; }

@@ -19,17 +19,18 @@
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
       <span></span><span></span><span></span><span class="sr-only">Open menu</span>
     </button>
-    <nav id="site-nav" aria-label="Main navigation">
-      <a href="#story">Celebrate</a>
-      <a href="#weekend">Schedule</a>
-      <a href="#travel">Travel</a>
-      <a href="#details">Details</a>
-      <a class="nav-rsvp" href="#rsvp">RSVP</a>
+    <nav id="site-nav" aria-label="Wedding details" role="tablist">
+      <a href="#home" role="tab" aria-controls="home">Home</a>
+      <a href="#weekend" role="tab" aria-controls="weekend">Schedule</a>
+      <a href="#menu" role="tab" aria-controls="menu">Menu</a>
+      <a href="#travel" role="tab" aria-controls="travel">Travel</a>
+      <a href="#details" role="tab" aria-controls="details">Details</a>
+      <a class="nav-rsvp" href="#rsvp" role="tab" aria-controls="rsvp">RSVP</a>
     </nav>
   </header>
 
   <main id="main">
-    <section class="hero" id="home">
+    <section class="hero tab-panel" id="home" role="tabpanel" data-tab-panel>
       <div class="hero-art" aria-hidden="true">
         <div class="sun"></div>
         <div class="ridge ridge-back"></div>
@@ -46,10 +47,10 @@
         </div>
         <a class="button button-light" href="#rsvp">Kindly respond</a>
       </div>
-      <a class="scroll-cue" href="#story" aria-label="Scroll to our story">Scroll <span>↓</span></a>
+      <a class="scroll-cue" href="#weekend" aria-label="View the schedule">Explore <span>→</span></a>
     </section>
 
-    <section class="section intro" id="story">
+    <section class="section intro supporting-section" id="story" hidden>
       <div class="section-number">01</div>
       <div class="intro-copy reveal">
         <p class="eyebrow">Dinner, drinks & dancing</p>
@@ -68,7 +69,7 @@
       </div>
     </section>
 
-    <section class="section weekend" id="weekend">
+    <section class="section weekend tab-panel" id="weekend" role="tabpanel" data-tab-panel hidden>
       <div class="section-heading reveal">
         <p class="eyebrow">Saturday, May 29</p>
         <h2>The evening</h2>
@@ -107,7 +108,7 @@
       </div>
     </section>
 
-    <section class="section menu-section" id="menu">
+    <section class="section menu-section tab-panel" id="menu" role="tabpanel" data-tab-panel hidden>
       <div class="menu-intro reveal">
         <p class="eyebrow">Dinner is served</p>
         <h2>A Mediterranean<br>feast</h2>
@@ -139,7 +140,7 @@
       </div>
     </section>
 
-    <section class="section travel" id="travel">
+    <section class="section travel tab-panel" id="travel" role="tabpanel" data-tab-panel hidden>
       <div class="section-heading reveal">
         <p class="eyebrow">Make a weekend of it</p>
         <h2>Stay awhile</h2>
@@ -174,7 +175,7 @@
       </div>
     </section>
 
-    <section class="section details" id="details">
+    <section class="section details tab-panel" id="details" role="tabpanel" data-tab-panel hidden>
       <div class="section-heading reveal">
         <p class="eyebrow">Good to know</p>
         <h2>Details, details</h2>
@@ -203,13 +204,13 @@
       </div>
     </section>
 
-    <section class="section registry" id="registry">
+    <section class="section registry supporting-section" id="registry" hidden>
       <p class="eyebrow reveal">The important part</p>
       <h2 class="reveal">Good food, good music,<br>our favorite people.</h2>
       <p class="reveal">We’re keeping things relaxed and joyful. Come hungry, wear something you feel great in, and save some energy for the dance floor.</p>
     </section>
 
-    <section class="rsvp" id="rsvp">
+    <section class="rsvp tab-panel" id="rsvp" role="tabpanel" data-tab-panel hidden>
       <div class="rsvp-copy reveal">
         <p class="eyebrow">We hope you’ll join us</p>
         <h2>Will we see you<br>in Raleigh?</h2>
