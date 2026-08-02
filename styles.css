@@ -163,13 +163,17 @@ footer p { margin: 0; }
 
 @media (max-width: 800px) {
   h2 { font-size: clamp(2.8rem, 14vw, 4.5rem); }
-  .site-header { position: fixed; }
-  .menu-toggle { z-index: 12; display: flex; min-width: 4.5rem; min-height: 2.35rem; align-items: center; justify-content: center; padding: .45rem .8rem; border: 1px solid rgba(255,255,255,.75); background: rgba(17,29,24,.35); color: #fff; }
-  .menu-toggle .menu-label { font-size: .68rem; font-weight: 600; letter-spacing: .14em; line-height: 1; text-transform: uppercase; }
-  nav { position: fixed; inset: 0; z-index: 11; display: none; flex-direction: column; justify-content: center; background: var(--forest); }
-  nav.open { display: flex; }
-  nav a { font-family: var(--serif); font-size: 1.8rem; font-weight: 400; letter-spacing: 0; text-transform: none; }
-  nav a[aria-current]:not(.nav-rsvp) { box-shadow: none; color: #efc486; }
+  .site-header { position: fixed; min-height: 4.5rem; background: rgba(251,248,241,.98); color: var(--ink); }
+  .menu-toggle { z-index: 12; display: grid; width: 42px; height: 42px; place-content: center; gap: 6px; padding: 0; border: 0; background: transparent; color: var(--ink); cursor: pointer; }
+  .menu-toggle span:not(.sr-only) { display: block; width: 23px; height: 1px; background: currentColor; transition: transform 180ms ease; }
+  .menu-toggle[aria-expanded="true"] span:nth-child(2) { transform: translateY(3.5px) rotate(45deg); }
+  .menu-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-3.5px) rotate(-45deg); }
+  nav { position: absolute; top: 4.5rem; left: 0; z-index: 11; display: none; width: 100%; padding: .75rem 4vw 1rem; grid-template-columns: repeat(4, 1fr); gap: .25rem .5rem; background: var(--paper); color: var(--ink); border-bottom: 1px solid var(--line); box-shadow: 0 14px 30px rgba(30,44,38,.12); }
+  nav.open { display: grid; }
+  nav a { padding: .65rem .25rem; font-family: var(--sans); font-size: .62rem; font-weight: 600; letter-spacing: .08em; text-align: center; text-transform: uppercase; }
+  nav a[aria-current]:not(.nav-rsvp) { box-shadow: none; color: var(--terracotta); }
+  .nav-rsvp { border-color: var(--line); }
+  .nav-rsvp[aria-current] { background: var(--forest); color: var(--cream); }
   .hero h1 { max-width: 100%; margin-bottom: 1.75rem; font-size: clamp(1.9rem, 9vw, 4rem); line-height: .92; }
   .hero .eyebrow { max-width: 100%; font-size: .62rem; letter-spacing: .16em; }
   .hero-meta { flex-direction: column; gap: .2rem; }
