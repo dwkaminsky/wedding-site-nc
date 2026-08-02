@@ -52,7 +52,7 @@ nav a[aria-current]:not(.nav-rsvp) { box-shadow: 0 2px 0 var(--gold); }
 .hero-meta { display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase; }
 .diamond { color: var(--gold); font-size: .6rem; }
 .hero-art { position: absolute; z-index: 2; inset: 0; opacity: .9; }
-.hero-photo-card { position: absolute; z-index: 4; top: 50%; right: 4vw; width: min(26vw, 22rem); margin: 0; padding: .65rem; background: var(--paper); transform: translateY(-50%) rotate(2deg); box-shadow: 0 24px 70px rgba(10,24,18,.38); }
+.hero-photo-card { position: absolute; z-index: 4; top: 50%; right: 3vw; width: min(28vw, 24rem); margin: 0; padding: .65rem; background: var(--paper); transform: translateY(-50%) rotate(2deg); box-shadow: 0 24px 70px rgba(10,24,18,.38); }
 .hero-photo-card img { display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center; }
 .sun { position: absolute; top: 17%; left: 50%; width: min(39vw, 33rem); aspect-ratio: 1; border: 1px solid rgba(196,139,75,.45); border-radius: 50%; transform: translateX(-50%); box-shadow: inset 0 0 80px rgba(196,139,75,.08); }
 .ridge { position: absolute; bottom: -15%; left: -10%; width: 120%; height: 60%; clip-path: polygon(0 65%, 8% 52%, 18% 60%, 32% 25%, 45% 55%, 60% 18%, 73% 52%, 85% 32%, 100% 64%, 100% 100%, 0 100%); }
@@ -171,7 +171,7 @@ footer p { margin: 0; }
   .hero h1 { max-width: 100%; margin-bottom: 1.75rem; font-size: clamp(1.9rem, 9vw, 4rem); line-height: .92; }
   .hero .eyebrow { max-width: 100%; font-size: .62rem; letter-spacing: .16em; }
   .hero-copy { inset: 0; justify-content: flex-end; padding: 22rem 1rem 3.5rem; }
-  .hero-photo-card { top: 5.5rem; right: 50%; width: min(58vw, 13.5rem); padding: .45rem; transform: translateX(50%) rotate(1.5deg); }
+  .hero-photo-card { top: 7rem; right: 50%; width: min(66vw, 15.5rem); padding: .45rem; transform: translateX(50%) rotate(1.5deg); }
   .hero-photo-card img { aspect-ratio: 1 / 1; }
   .hero-meta { flex-direction: column; gap: .2rem; }
   .diamond { display: none; }
