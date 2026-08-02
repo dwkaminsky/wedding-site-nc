@@ -13,8 +13,8 @@
 
 * { box-sizing: border-box; }
 [hidden] { display: none !important; }
-html { scroll-behavior: smooth; }
-body { margin: 0; background: var(--cream); color: var(--ink); font-family: var(--sans); font-size: 16px; line-height: 1.65; }
+html { overflow-x: hidden; scroll-behavior: smooth; }
+body { margin: 0; overflow-x: hidden; background: var(--cream); color: var(--ink); font-family: var(--sans); font-size: 16px; line-height: 1.65; }
 .page-section, .supporting-section { scroll-margin-top: 3.75rem; }
 a { color: inherit; }
 button { font: inherit; }
@@ -29,7 +29,7 @@ h3 { font-family: var(--serif); font-size: 1.8rem; font-weight: 400; line-height
 .button-dark:hover { background: var(--cream); color: var(--forest); }
 .text-link { display: inline-block; border-bottom: 1px solid currentColor; font-size: .8rem; font-weight: 600; letter-spacing: .08em; text-decoration: none; text-transform: uppercase; }
 
-.site-header { position: fixed; z-index: 10; top: 0; display: flex; width: 100%; min-height: 3.75rem; align-items: center; justify-content: space-between; padding: .65rem 4vw; background: rgba(24, 40, 33, .96); color: var(--cream); box-shadow: 0 1px 0 rgba(255,255,255,.1); backdrop-filter: blur(12px); }
+.site-header { position: fixed; z-index: 10; top: 0; right: 0; left: 0; display: flex; min-height: 3.75rem; align-items: center; justify-content: space-between; padding: .65rem 4vw; background: rgba(24, 40, 33, .96); color: var(--cream); box-shadow: 0 1px 0 rgba(255,255,255,.1); backdrop-filter: blur(12px); }
 .monogram { font-family: var(--serif); font-size: 1.6rem; letter-spacing: -.1em; text-decoration: none; }
 .monogram span { margin: 0 .18em; color: var(--gold); font-size: .7em; }
 nav { display: flex; align-items: center; gap: clamp(1rem, 2.5vw, 2.5rem); }
@@ -165,8 +165,8 @@ footer p { margin: 0; }
 @media (max-width: 800px) {
   h2 { font-size: clamp(2.8rem, 14vw, 4.5rem); }
   .site-header { position: fixed; }
-  .menu-toggle { z-index: 12; display: block; width: 2rem; height: 2rem; padding: .3rem; }
-  .menu-toggle span:not(.sr-only) { display: block; width: 100%; height: 1px; margin: 5px 0; background: currentColor; transition: .2s; }
+  .menu-toggle { z-index: 12; display: flex; min-width: 4.5rem; min-height: 2.35rem; align-items: center; justify-content: center; padding: .45rem .8rem; border: 1px solid rgba(255,255,255,.75); background: rgba(17,29,24,.35); color: #fff; }
+  .menu-toggle .menu-label { font-size: .68rem; font-weight: 600; letter-spacing: .14em; line-height: 1; text-transform: uppercase; }
   nav { position: fixed; inset: 0; z-index: 11; display: none; flex-direction: column; justify-content: center; background: var(--forest); }
   nav.open { display: flex; }
   nav a { font-family: var(--serif); font-size: 1.8rem; font-weight: 400; letter-spacing: 0; text-transform: none; }
